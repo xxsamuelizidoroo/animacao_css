@@ -1,0 +1,116 @@
+*,*::after, *::before {box-sizing: border-box};
+
+.conteudo{
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+
+h1, h2, p {
+    text-align: center;
+}
+
+/* _______________________________________________________ */
+/* (1ª Animação) Trocar a cor de fundo continuamente */
+
+/* Etapa 1 Regra de animação (animaFundo) */
+/* Trocar a cor de fundo da tela */
+
+@keyframes animaFundo {
+    0% {background-color: lightblue;}
+    50% {background-color: lightcoral;}
+    100% {background-color: lightgreen;}
+}
+
+/* Etapa 2 Executar de animação (animaFundo) */
+
+body {
+    font-family: 'Segoe UI';
+
+    /* Versão abreviada da chamada */
+    animation: animaFundo 3s infinite alternate-reverse;
+}
+
+/* _______________________________________________________ */
+/* (2ª Animação) Fazer texto aparecer com atraso */
+
+/* Etapa 1 Regra de animação (aparecer) */
+/* Fazer texto aparecer com atraso */
+
+@keyframes aparecer {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Etapa 2 Executar de animação (aparecer) */
+
+#dois {
+    animation-name: aparecer;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+/* _______________________________________________________ */
+/* (3ª Animação) Girar */
+
+/* Etapa 1 */
+
+#tres {
+    border: solid 3px;
+    padding: 5px;
+    width: 750px;
+    margin: auto;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+@keyframes animaImagem {
+    from {transform: translateX(0) rotateZ(0);opacity: 0;}
+
+    to {transform: translateX(570px) rotateZ(360deg);opacity: 1;}
+    
+}
+
+/* Etapa 2 */
+
+#tres img {
+    /* animation-name: animaImagem;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate; */
+
+
+    /* Versão abreviada da chamada */
+    animation: animaImagem 2s infinite linear alternate;
+}
+
+/* _______________________________________________________ */
+/* (4ª Animação) Deslizar */
+
+/* Etapa 1 */
+
+#quatro {
+    border: solid 3px;
+    padding: 5px;
+    width: 750px;
+    margin: auto;
+    margin-top: 10px;
+}
+
+@keyframes animaImagem2 {
+    from {transform: translateX(0);}
+    to {transform: translateX(580px);}
+}
+
+/* Etapa 2 */
+#quatro img {
+
+    /* Versão abreviada da chamada */
+    animation: animaImagem2 2s infinite linear alternate;
+}
